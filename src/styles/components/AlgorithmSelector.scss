@@ -1,0 +1,35 @@
+@import '../variables';
+@import '../mixins';
+
+.algorithm-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+
+    label {
+        font-size: 1rem;
+        color: $text-color;
+        margin-right: 0.5rem;
+    }
+
+    select {
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        outline: none;
+        background-color: white;
+        cursor: pointer;
+        transition: border-color 0.2s;
+
+        &:hover {
+            border-color: darken($primary-color, 10%);
+        }
+
+        &:focus {
+            border-color: $primary-color;
+            box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+        }
+    }
+}

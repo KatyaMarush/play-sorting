@@ -1,5 +1,6 @@
 import React from "react";
 import '../styles/components/Home.scss';
+import SortingVisualizer from "./SortingVisualizer";
 
 const Home: React.FC = () => {
     return (
@@ -11,6 +12,7 @@ const Home: React.FC = () => {
             <div>
                 <button className="cta-button">Explore the algorithms</button>
             </div>
+            <SortingVisualizer />
         </main>
     )
 }

@@ -1,0 +1,36 @@
+@import '../variables';
+@import '../mixins';
+
+.array-input {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+    input {
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        outline: none;
+        width: 300px;
+        background-color: white;
+        transition: border-color 0.2s;
+
+        &:hover {
+            border-color: darken($primary-color, 10%);
+        }
+
+        &:focus {
+            border-color: $primary-color;
+            box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+        }
+    }
+
+    .error {
+        color: red;
+        text-align: center;
+        margin-top: 0.5rem;
+        width: 100%;
+    }
+}

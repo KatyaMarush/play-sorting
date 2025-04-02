@@ -1,0 +1,55 @@
+// Import global variables
+@import '../../styles/variables';
+
+.sorting-visualizer {
+  text-align: center;
+  padding: $padding * 2;
+  background-color: $background-color;
+  font-family: $font-family;
+
+  .array-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 2px;
+    height: $container-height;
+    margin-bottom: $margin * 2;
+  }
+
+  .array-bar {
+    background-color: $primary-color;
+    width: $bar-width;
+    transition: height 0.3s;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  
+    &.array-bar-active {
+      background-color: $active-bar-color;
+    }
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: $margin;
+
+    button {
+      padding: 0.5rem 1.5rem;
+      border: none;
+      border-radius: $border-radius;
+      background-color: $primary-color;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+
+      &:disabled {
+        background-color: $disabled-color;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
