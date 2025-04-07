@@ -38,7 +38,7 @@ const ArrayInput: React.FC<Props> = ({onArrayChange}) => {
                 type="text"
                 value={inputValue}
                 onChange={handleChange}
-                placeholder="Enter numbers, separated by commas" />
+                placeholder="Enter numbers separated by commas" />
             {error && <p className="error">{error}</p>}
         </div>
     )

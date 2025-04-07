@@ -1,4 +1,3 @@
-// Import global variables
 @import '../../styles/variables';
 
 .sorting-visualizer {
@@ -19,11 +18,11 @@
   .array-bar {
     background-color: $primary-color;
     width: $bar-width;
-    transition: height 0.3s;
+    transition: background-color 0.3s;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
-  
-    &.array-bar-active {
+
+    &.active {
       background-color: $active-bar-color;
     }
   }

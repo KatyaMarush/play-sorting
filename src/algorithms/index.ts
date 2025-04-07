@@ -1,8 +1,7 @@
-import bubbleSort from './bubbleSort';
-import quickSort from './quickSort';
-import { SortingAlgorithm } from '../types/types';
+import { bubbleSort } from './bubbleSort';
+import { SortingFunction, Algorithms } from '../types/types';
 
-export const algorithms: Record<SortingAlgorithm, (arr: number[]) => number[]> = {
+export const algorithms: Algorithms = {
     BubbleSort: bubbleSort,
-    QuickSort: quickSort,
+    // Здесь можно добавить и другие алгоритмы
 };

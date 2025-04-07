@@ -11,14 +11,14 @@ const AlgorithmSelector: React.FC<Props> = ({ selectedAlgorithm, onAlgorithmChan
     const algorithms: SortingAlgorithm[] = ["BubbleSort", "QuickSort"];
 
     const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        const selected = event.target.value as SortingAlgorithm;  // Приведение к типу
+        const selected = event.target.value as SortingAlgorithm;
         onAlgorithmChange(selected);
     };
 
     return (
         <div className="algorithm-selector">
-            <label>Select Algorithm:</label>
-            <select value={selectedAlgorithm} onChange={handleChange}>
+            <label htmlFor="algorithm-select">Select Algorithm:</label>
+            <select id="algorithm-select" value={selectedAlgorithm} onChange={handleChange}>
                 {algorithms.map((algorithm) => (
                     <option key={algorithm} value={algorithm}>{algorithm}</option>
                 ))}
